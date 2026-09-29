@@ -1,0 +1,20 @@
+{
+  "panel": "FigS07j-k",
+  "aliases": [],
+  "mode": "paired",
+  "input": "FigS07/source_data/FigS07j-k_input.csv",
+  "observations": "FigS07/source_data/FigS07j-k_observations.csv",
+  "reference_statistics": "FigS07/statistics/FigS07j-k_reference_statistics.csv",
+  "pair_regions": [
+    "crypt_lumen",
+    "villus_lumen"
+  ],
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "paired_test": "ttest",
+  "pixel_input_column": "source_csv",
+  "pixel_recipe": "finite_per_metric"
+}

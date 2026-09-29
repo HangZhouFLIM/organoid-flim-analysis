@@ -1,0 +1,43 @@
+{
+  "num_bins": 50,
+  "metrics": [
+    "MeanInt",
+    "MeanTauPhase",
+    "MeanTauModulation"
+  ],
+  "projection": "Dot product onto crypt-centroid to villus-centroid vector; clamp to [0,1]",
+  "empty_centroid_projection": 0,
+  "missing_metric_values": "Exclude NaN values for each bin and metric; preserve their source rows",
+  "percentiles": [
+    10,
+    25,
+    50,
+    75,
+    90
+  ],
+  "percentile_method": "hazen (MATLAB prctile interpolation)",
+  "error_band": "Pooled-cell SEM: sample standard deviation divided by sqrt(finite cell count); 0 for singleton bins",
+  "smoothing": "none for the three archived profiles",
+  "statistics": "Descriptive profiles; no cell-level inferential tests",
+  "projection_tolerance": 1e-10,
+  "svg_tolerance_pixels": 0.0003,
+  "svg_axis_transforms": {
+    "MeanInt": {
+      "scale": -4.7,
+      "offset": 609.0
+    },
+    "MeanTauPhase": {
+      "scale": -938.0,
+      "offset": 1921.0
+    },
+    "MeanTauModulation": {
+      "scale": -781.6666666666667,
+      "offset": 2702.6666666666665
+    }
+  },
+  "archived_profiles": {
+    "MeanInt": "Fig01/figures/Fig01j-l/Fig01j-l_MeanInt_archived.svg",
+    "MeanTauPhase": "Fig01/figures/Fig01j-l/Fig01j-l_MeanTauPhase_archived.svg",
+    "MeanTauModulation": "Fig01/figures/Fig01j-l/Fig01j-l_MeanTauModulation_archived.svg"
+  }
+}

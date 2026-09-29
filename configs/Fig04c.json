@@ -1,0 +1,15 @@
+{
+  "panel": "Fig04c",
+  "aliases": [],
+  "mode": "paired",
+  "input": "Fig04/source_data/Fig04c_input.csv",
+  "observations": "Fig04/source_data/Fig04c_observations.csv",
+  "reference_statistics": "Fig04/statistics/Fig04c_reference_statistics.csv",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "pixel_input_column": "source_csv",
+  "pixel_recipe": "finite_per_metric"
+}

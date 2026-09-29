@@ -1,0 +1,16 @@
+{
+  "version": "0.3.0-local-candidate",
+  "title": "Figure-linked intestinal organoid fluorescence imaging data and analysis",
+  "status": "GitHub analysis candidate with Figure 1j-l included; selected raw inputs and configured pixel/mask/object/spatial workflows verified; documented upstream gaps remain",
+  "data_repository": "Zenodo",
+  "code_repository": "GitHub",
+  "data_doi": null,
+  "code_url": "https://github.com/HangZhouFLIM/organoid-flim-analysis",
+  "code_release_doi": null,
+  "authors": null,
+  "data_license": null,
+  "code_license": null,
+  "data_release_manifest": "manifests/data_release.json",
+  "workflow_input_catalog": "manifests/workflow_inputs.json",
+  "code_repository_visibility": "private"
+}

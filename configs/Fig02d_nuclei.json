@@ -1,0 +1,18 @@
+{
+  "panel": "Fig02d_nuclei",
+  "aliases": [
+    "Fig02d"
+  ],
+  "mode": "independent",
+  "input": "Fig02/object_exports/Fig02d_nuclei_input.csv",
+  "observations": "Fig02/source_data/Fig02d_nuclei_observations.csv",
+  "reference_statistics": "Fig02/statistics/Fig02d_nuclei_reference_statistics.csv",
+  "reference": "Intesticult+CV",
+  "test": "mannwhitney",
+  "adjustment": "holm",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ]
+}

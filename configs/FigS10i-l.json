@@ -1,0 +1,10 @@
+{
+  "panel": "FigS10i-l",
+  "aliases": [],
+  "mode": "paired",
+  "input": "FigS10/source_data/FigS10i-l_input.csv",
+  "observations": "FigS10/source_data/FigS10i-l_observations.csv",
+  "reference_statistics": "FigS10/statistics/FigS10i-l_reference_statistics.csv",
+  "pixel_input_column": "source_path",
+  "pixel_recipe": "finite_per_metric"
+}

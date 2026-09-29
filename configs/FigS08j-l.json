@@ -1,0 +1,8 @@
+{
+  "panel": "FigS08j-l",
+  "aliases": [],
+  "mode": "timelapse",
+  "input": "FigS08/source_data/FigS08j-l_input.csv",
+  "observations": null,
+  "reference_statistics": null
+}

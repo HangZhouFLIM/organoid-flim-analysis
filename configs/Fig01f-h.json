@@ -1,0 +1,17 @@
+{
+  "panel": "Fig01f-h",
+  "aliases": [],
+  "mode": "endpoint",
+  "input": "Fig01/object_exports/Fig01f-h_input.csv",
+  "observations": "Fig01/source_data/Fig01f-h_observations.csv",
+  "reference_statistics": "Fig01/statistics/Fig01f-h_reference_statistics.csv",
+  "reference": "first",
+  "statistical_unit": "exported observation",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "object_input_column": "source_object_file",
+  "object_recipe": "exact archived selected object row; selection and original pooled-observation statistical unit retained"
+}

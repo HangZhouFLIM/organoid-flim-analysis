@@ -1,0 +1,18 @@
+{
+  "panel": "Fig06d",
+  "aliases": [],
+  "mode": "independent",
+  "input": "Fig06/source_data/Fig06d_input.csv",
+  "observations": "Fig06/source_data/Fig06d_observations.csv",
+  "reference_statistics": "Fig06/statistics/Fig06d_reference_statistics.csv",
+  "reference": "control",
+  "test": "welch",
+  "adjustment": "none",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "pixel_input_column": "relative_path",
+  "pixel_recipe": "finite_per_metric"
+}

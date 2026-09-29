@@ -1,0 +1,17 @@
+{
+  "panel": "FigS08a-e",
+  "aliases": [],
+  "mode": "endpoint",
+  "input": "FigS08/source_data/FigS08a-e_input.csv",
+  "observations": "FigS08/source_data/FigS08a-e_observations.csv",
+  "reference_statistics": "FigS08/statistics/FigS08a-e_reference_statistics.csv",
+  "reference": "control",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "also_paired": true,
+  "pixel_input_column": "source_csv",
+  "pixel_recipe": "finite_per_metric"
+}

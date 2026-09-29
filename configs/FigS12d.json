@@ -1,0 +1,10 @@
+{
+  "panel": "FigS12d",
+  "aliases": [],
+  "mode": "paired",
+  "input": "FigS12/source_data/FigS12d_input.csv",
+  "observations": "FigS12/source_data/FigS12d_observations.csv",
+  "reference_statistics": "FigS12/statistics/FigS12d_reference_statistics.csv",
+  "pixel_input_column": "source_pxdata_csv",
+  "pixel_recipe": "finite_per_metric"
+}

@@ -1,0 +1,111 @@
+{
+  "TMRM_mitochondria": {
+    "intensity_percentiles": [
+      1,
+      99.8
+    ],
+    "median_size": 3,
+    "gaussian_sigma": 1.34,
+    "dot_sigma": 1.5,
+    "dot_cutoff": 0.05,
+    "filament_sigma": 1,
+    "filament_cutoff": 0.11,
+    "response_percentiles": [
+      1,
+      99.5
+    ],
+    "min_object_size": 12,
+    "hole_size": 12,
+    "closing_radius": 1
+  },
+  "Lgr5": {
+    "shape": [
+      246,
+      246
+    ],
+    "coordinate_base": 1,
+    "gfp_percentiles": [
+      25,
+      75
+    ],
+    "min_object_size": 20,
+    "hole_size": 20,
+    "selection": "intermediate plus high GFP, intersected with mitochondrial mask",
+    "max_tau_normalized_ns": 4
+  },
+  "Muc2": {
+    "coordinate_base": 0,
+    "shape": "per-image recorded mask/coordinate extent",
+    "positive": "deposited accepted Cellpose mask intersected with common valid coordinates",
+    "negative_mitochondria": "run TMRM segmentation within the Muc2-negative domain",
+    "max_tau_normalized_ns": 4
+  },
+  "crypt_rotenone": {
+    "tmrm_coordinate_transform": "maximum(1,floor(coordinate/2)) when TMRM extent exceeds 246 and NADPH extent does not",
+    "duplicate_coordinates": "arithmetic mean before channel matching"
+  },
+  "statistics": {
+    "alpha": 0.05,
+    "tails": "two-sided",
+    "endpoint_branch": "per-group Shapiro-Wilk; Welch ANOVA and Games-Howell-type control comparisons, otherwise Kruskal-Wallis and Dunn-Holm",
+    "exceptions": "See each figure configuration; paired tests and correction families are not standardized across analyses."
+  },
+  "added_pixel_inputs": {
+    "aggregation": "Arithmetic mean of finite values independently for each metric",
+    "Fig01b-d": {
+      "rounding": null
+    },
+    "FigS01b-c": {
+      "rounding_decimal_places": {
+        "Int": 4,
+        "TauPhase": 9,
+        "TauModulation": 6
+      },
+      "source_note": "parameters/FigS01b-c_export_settings.txt"
+    },
+    "FigS05c-d": {
+      "rounding_decimal_places": {
+        "Int": 5,
+        "TauPhase": 6,
+        "TauModulation": 6
+      },
+      "original_channel_alignment": "Pixel Int matches its selected raw intensity image at zero-based array index [Ycoord+1, Xcoord+1]. Original FLIM triplet retained; unused fluorescence channels excluded."
+    }
+  },
+  "Fig02d_cells": {
+    "organization": "One combined collection; condition and sample identifiers",
+    "mask_index": "Fig02/acquisition_metadata/Fig02d_cells_mask_index.csv",
+    "identity_or_exclusion_recipe": "Use source integer labels directly, or set pixels to zero where the indexed exclusion mask is nonzero.",
+    "centroid_coordinate_base": 1,
+    "centroid_tolerance_pixels": 5.01e-05,
+    "object_selection": "Exact retained source row and ID from the archived observation input; no date-specific statistical strata added."
+  },
+  "Fig01b-d_eight_setting_screen": {
+    "acquisitions_per_setting": 7,
+    "settings_count": 8,
+    "settings_table": "parameters/Fig01b-d_acquisition_settings.csv",
+    "grouping": "Low: 2 settings; Medium: 4 settings; High: 2 settings; descriptive pooling preserves all acquisitions"
+  },
+  "data_folder_roles": {
+    "raw_for_GSLab": "Channel TIFF inputs and original XML in matching MetaData folders",
+    "GSLab_image_exports": "Processed images exported from GSLab",
+    "masks": "Separate binary/integer-label masks",
+    "raw_microscopy": "Non-GSLab excitation/STED acquisition images",
+    "segmentation_inputs": "Original segmentation intensity inputs"
+  },
+  "raw_acquisition_matching": {
+    "index": "metadata/GSLab_input_index.csv",
+    "new_pixel_crosswalk": "metadata/pixel_to_raw_acquisition.csv",
+    "rule": "Within a matched assay and condition folder, the acquisition token before the final GSLab export sequence identifies the raw channel set. Time-lapse frame identifiers are retained.",
+    "selection": "Only acquisition IDs linked to already selected Results exports; complete available channel triplets retained.",
+    "series_xml": "Shared by selected frames; original bytes and timestamps unchanged."
+  },
+  "Fig01j-l_spatial": {
+    "parameter_file": "parameters/Fig01j-l_spatial.json",
+    "anchor_index": "Fig01/acquisition_metadata/Fig01j-l_input_index.csv",
+    "source_objects": 789,
+    "finite_rows_per_metric": 785,
+    "acquisitions": 5,
+    "interpretation": "Descriptive pooled-cell means and SEM; no inferential tests"
+  }
+}

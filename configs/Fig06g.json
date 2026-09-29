@@ -1,0 +1,9 @@
+{
+  "panel": "Fig06g",
+  "aliases": [],
+  "mode": "nile",
+  "input": "Fig06/source_data/Fig06g_input.csv",
+  "observations": "Fig06/source_data/Fig06g_observations.csv",
+  "reference_statistics": "Fig06/statistics/Fig06g_reference_statistics.csv",
+  "emission_reference": "Fig06/statistics/Fig06g_combined_channel_statistics.csv"
+}

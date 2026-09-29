@@ -1,0 +1,8 @@
+{
+  "panel": "FigS02_ROI",
+  "aliases": [],
+  "mode": "valid_percentage",
+  "input": "FigS02/source_data/FigS02_ROI_input.csv",
+  "observations": null,
+  "reference_statistics": null
+}

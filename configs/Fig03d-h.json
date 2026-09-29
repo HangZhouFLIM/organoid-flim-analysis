@@ -1,0 +1,17 @@
+{
+  "panel": "Fig03d-h",
+  "aliases": [],
+  "mode": "endpoint",
+  "input": "Fig03/source_data/Fig03d-h_input.csv",
+  "observations": "Fig03/source_data/Fig03d-h_observations.csv",
+  "reference_statistics": "Fig03/statistics/Fig03d-h_reference_statistics.csv",
+  "reference": "control",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "also_paired": true,
+  "pixel_input_column": "source_csv",
+  "pixel_recipe": "finite_per_metric"
+}

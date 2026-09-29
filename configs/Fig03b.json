@@ -1,0 +1,8 @@
+{
+  "panel": "Fig03b",
+  "aliases": [],
+  "mode": "profile",
+  "input": "Fig03/source_data/Fig03b_input.csv",
+  "observations": null,
+  "reference_statistics": null
+}

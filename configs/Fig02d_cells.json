@@ -1,0 +1,21 @@
+{
+  "panel": "Fig02d_cells",
+  "aliases": [
+    "Fig02d"
+  ],
+  "mode": "independent",
+  "input": "Fig02/object_exports/Fig02d_cells_input.csv",
+  "observations": "Fig02/source_data/Fig02d_cells_observations.csv",
+  "reference_statistics": "Fig02/statistics/Fig02d_cells_reference_statistics.csv",
+  "reference": "Intesticult+CV",
+  "test": "mannwhitney",
+  "adjustment": "holm",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "object_input_column": "source_object_file",
+  "object_recipe": "exact archived selected object row; selection and original pooled-observation statistical unit retained",
+  "object_mask_index": "Fig02/acquisition_metadata/Fig02d_cells_mask_index.csv"
+}

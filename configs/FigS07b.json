@@ -1,0 +1,14 @@
+{
+  "panel": "FigS07b",
+  "mode": "scrna",
+  "input": "FigS07/source_data/FigS07b_sample_level_scores.csv",
+  "observations": null,
+  "reference_statistics": null,
+  "aliases": [],
+  "source_accessions": [
+    "GSE164638",
+    "GSE165092"
+  ],
+  "statistical_unit": "source-sample group, not individual cells",
+  "summary_reference": "FigS07/source_data/FigS07b_four_cell_pathway_equal_sample_weighted_means.tsv"
+}

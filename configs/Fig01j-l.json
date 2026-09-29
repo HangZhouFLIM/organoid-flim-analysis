@@ -1,0 +1,18 @@
+{
+  "panel": "Fig01j-l",
+  "aliases": [],
+  "mode": "spatial_cells",
+  "input": "Fig01/acquisition_metadata/Fig01j-l_input_index.csv",
+  "observations": null,
+  "reference_statistics": null,
+  "parameter_file": "parameters/Fig01j-l_spatial.json",
+  "intensity_reference": "Fig01/source_data/Fig01j-l/Fig01j-l_reference_intensity_per_sample.csv",
+  "phase_bins_reference": "Fig01/source_data/Fig01j-l/Fig01j-l_reference_phase_bins.csv",
+  "source_sample_names": {
+    "s001": "FLIM_nr12s_3_01_Labels.csv",
+    "s002": "FLIM_nr12s_5_02_Labels.csv",
+    "s003": "FLIM_nr12s_6_03_Labels.csv",
+    "s004": "FLIM_nr12s_7_04_Labels.csv",
+    "s005": "FLIM_nr12s_8_05_Labels.csv"
+  }
+}

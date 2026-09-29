@@ -1,0 +1,16 @@
+{
+  "panel": "FigS12b",
+  "aliases": [],
+  "mode": "endpoint",
+  "input": "FigS12/source_data/FigS12b_input.csv",
+  "observations": "FigS12/source_data/FigS12b_observations.csv",
+  "reference_statistics": "FigS12/statistics/FigS12b_reference_statistics.csv",
+  "reference": "control",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "pixel_input_column": "source_csv",
+  "pixel_recipe": "finite_per_metric"
+}

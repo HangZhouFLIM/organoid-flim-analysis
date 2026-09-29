@@ -1,0 +1,21 @@
+{
+  "panel": "Fig03i-m",
+  "aliases": [],
+  "mode": "independent",
+  "input": "Fig03/source_data/Fig03i-m_input.csv",
+  "observations": "Fig03/source_data/Fig03i-m_observations.csv",
+  "reference_statistics": "Fig03/statistics/Fig03i-m_reference_statistics.csv",
+  "reference": "control",
+  "test": "welch",
+  "adjustment": "holm",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "also_paired": true,
+  "paired_test": "ttest",
+  "paired_family": "across_conditions",
+  "pixel_input_column": "source_csv",
+  "pixel_recipe": "finite_per_metric"
+}

@@ -1,0 +1,12 @@
+{
+  "panel": "Fig03n-p",
+  "aliases": [
+    "FigS08m-o"
+  ],
+  "mode": "endpoint",
+  "input": "Fig03/source_data/Fig03n-p_input.csv",
+  "observations": "Fig03/source_data/Fig03n-p_observations.csv",
+  "reference_statistics": "Fig03/statistics/Fig03n-p_reference_statistics.csv",
+  "reference": "crypt",
+  "display_channel": "TMRM"
+}

@@ -1,0 +1,14 @@
+{
+  "panel": "FigS07c",
+  "mode": "scrna",
+  "input": "FigS07/source_data/FigS07c_sample_level_scores.csv",
+  "observations": null,
+  "reference_statistics": null,
+  "aliases": [],
+  "source_accessions": [
+    "GSE164638",
+    "GSE165092"
+  ],
+  "statistical_unit": "source-sample group, not individual cells",
+  "summary_reference": "FigS07/source_data/FigS07c_complex_v_enterocyte_difference_by_sample.tsv"
+}

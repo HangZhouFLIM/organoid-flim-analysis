@@ -1,0 +1,16 @@
+{
+  "panel": "Fig03m_lumen",
+  "aliases": [],
+  "mode": "independent",
+  "input": "Fig03/source_data/Fig03m_lumen_input.csv",
+  "observations": "Fig03/source_data/Fig03m_lumen_observations.csv",
+  "reference_statistics": "Fig03/statistics/Fig03m_lumen_reference_statistics.csv",
+  "reference": "control",
+  "test": "mannwhitney",
+  "adjustment": "holm",
+  "metrics": [
+    "Int"
+  ],
+  "pixel_input_column": "relative_path",
+  "pixel_recipe": "finite_per_metric"
+}

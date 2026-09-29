@@ -1,0 +1,16 @@
+{
+  "panel": "FigS07l-n",
+  "aliases": [],
+  "mode": "independent",
+  "input": "FigS07/source_data/FigS07l-n_input.csv",
+  "observations": "FigS07/source_data/FigS07l-n_observations.csv",
+  "reference_statistics": "FigS07/statistics/FigS07l-n_reference_statistics.csv",
+  "reference": "control",
+  "test": "mannwhitney",
+  "adjustment": "holm",
+  "metrics": [
+    "Int"
+  ],
+  "pixel_input_column": "relative_path",
+  "pixel_recipe": "finite_per_metric"
+}

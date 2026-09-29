@@ -1,0 +1,34 @@
+{
+  "panel": "Fig01b-d",
+  "aliases": [],
+  "mode": "endpoint",
+  "input": "Fig01/object_exports/Fig01b-d_input.csv",
+  "observations": "Fig01/source_data/Fig01b-d_observations.csv",
+  "reference_statistics": null,
+  "reference": "first",
+  "pixel_input_column": "source_pxdata",
+  "pixel_recipe": "arithmetic_finite_per_metric",
+  "measurement_rounding": {},
+  "condition_order": [
+    "512_200_3%_line1",
+    "512_400_5%_line1",
+    "512_200_3%_line2",
+    "512_400_5%_line2",
+    "512_400_8%_line1",
+    "512_200_5%_line1",
+    "512_200_5%_line2",
+    "512_200_8%_line1"
+  ],
+  "photon_group_map": {
+    "512_200_3%_line1": "Low",
+    "512_400_5%_line1": "Low",
+    "512_200_3%_line2": "Medium",
+    "512_400_5%_line2": "Medium",
+    "512_400_8%_line1": "Medium",
+    "512_200_5%_line1": "Medium",
+    "512_200_5%_line2": "High",
+    "512_200_8%_line1": "High"
+  },
+  "acquisition_settings": "Fig01/acquisition_metadata/Fig01b-d_acquisition_settings.csv",
+  "selection": "Complete eight-setting screen; seven acquisitions per setting; do not reduce to one representative setting per photon group"
+}

@@ -1,0 +1,15 @@
+{
+  "panel": "Fig05b",
+  "aliases": [],
+  "mode": "endpoint",
+  "input": "Fig05/source_data/Fig05b_input.csv",
+  "observations": "Fig05/source_data/Fig05b_observations.csv",
+  "reference_statistics": "Fig05/statistics/Fig05b_reference_statistics.csv",
+  "reference": "control",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "measurement_mask_index": "Fig05/acquisition_metadata/Fig05b_measurement_mask_index.csv"
+}

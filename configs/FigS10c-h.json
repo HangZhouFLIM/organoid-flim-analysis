@@ -1,0 +1,10 @@
+{
+  "panel": "FigS10c-h",
+  "aliases": [],
+  "mode": "paired",
+  "input": "FigS10/source_data/FigS10c-h_input.csv",
+  "observations": "FigS10/source_data/FigS10c-h_observations.csv",
+  "reference_statistics": "FigS10/statistics/FigS10c-h_reference_statistics.csv",
+  "pixel_input_column": "source_pxdata",
+  "pixel_recipe": "finite_per_metric"
+}

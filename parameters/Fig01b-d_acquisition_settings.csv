@@ -1,0 +1,9 @@
+photon_group,condition,resolution_pixels,scan_speed,laser_percent,line_accumulation,reported_average_photon_per_pixel,recomputed_average_photon_per_pixel,acquisitions
+Low,512_200_3%_line1,512,200,3.0,1,20,20.046627925714287,7
+Low,512_400_5%_line1,512,400,5.0,1,18,18.034784558571427,7
+Medium,512_200_3%_line2,512,200,3.0,2,32,32.71186750428571,7
+Medium,512_400_5%_line2,512,400,5.0,2,29,29.815188371428572,7
+Medium,512_400_8%_line1,512,400,8.0,1,33,33.59279853571428,7
+Medium,512_200_5%_line1,512,200,5.0,1,40,40.00244513285715,7
+High,512_200_5%_line2,512,200,5.0,2,74,74.75965806142858,7
+High,512_200_8%_line1,512,200,8.0,1,81,81.57517657857143,7

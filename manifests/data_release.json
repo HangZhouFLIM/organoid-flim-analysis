@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "code_version": "0.3.0-local-candidate",
+  "data_repository": "Zenodo",
+  "data_doi": null,
+  "experimental_files": 9133,
+  "experimental_bytes": 3856634699,
+  "workflows": 43,
+  "raw_GSLab_acquisition_frame_groups": 699,
+  "raw_GSLab_channel_TIFFs": 3552,
+  "raw_GSLab_XML": 1217,
+  "metadata_files": [
+    {
+      "file": "metadata/file_manifest.csv",
+      "bytes": 3327130,
+      "sha256": "c00cae79a032b0373edfbbf8100bf2fc9dd56148e324f215ddb06cdb9c77d95b"
+    },
+    {
+      "file": "metadata/panel_index.csv",
+      "bytes": 13897,
+      "sha256": "4cdf86b10a4c4b183fd2a0fa46919da60c6f0048ec1b13b1db915a4ceaf97c8b"
+    },
+    {
+      "file": "metadata/GSLab_input_index.csv",
+      "bytes": 475351,
+      "sha256": "e09c0dddb6eeb310946a30b0d4b4284a4d59b6d790e7f6aa96b8690080433d60"
+    },
+    {
+      "file": "metadata/pixel_to_raw_acquisition.csv",
+      "bytes": 1068424,
+      "sha256": "23c3d9d2b1feba6f4e4c180b477419a4b2894103e0f8e8b910a91b1146757d06"
+    },
+    {
+      "file": "metadata/new_acquisition_index.csv",
+      "bytes": 154500,
+      "sha256": "b64d8998ecbcc1b80eeef75f38e8f2edfbe569cf36352defd4f0315a068c1421"
+    },
+    {
+      "file": "metadata/missing_inputs.csv",
+      "bytes": 12300,
+      "sha256": "45b15f916e1523dc630edfdd3e3c07631d8a7dec0568686122ee71f870b17f59"
+    },
+    {
+      "file": "metadata/selection_audit.csv",
+      "bytes": 9171,
+      "sha256": "4ca8e83cf9e45484644726ee376886baac6798eab78c1ca324b2031225096d0c"
+    },
+    {
+      "file": "metadata/imaging_roles_by_figure.csv",
+      "bytes": 490,
+      "sha256": "a6c0228f430c8e0a8dcd1bf36aa88a414bd22f6088f4fa13d05bbe4213580554"
+    }
+  ],
+  "matching_rule": "Metadata hashes identify the exact deposited selection and crosswalks; acquisition dates do not define analysis groups."
+}

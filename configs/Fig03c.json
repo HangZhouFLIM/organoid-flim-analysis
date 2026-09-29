@@ -1,0 +1,18 @@
+{
+  "panel": "Fig03c",
+  "aliases": [
+    "FigS07d-g"
+  ],
+  "mode": "endpoint",
+  "input": "Fig03/source_data/Fig03c_input.csv",
+  "observations": "Fig03/source_data/Fig03c_observations.csv",
+  "reference_statistics": "Fig03/statistics/Fig03c_reference_statistics.csv",
+  "reference": "Control",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "pixel_input_column": "source_file",
+  "pixel_recipe": "finite_per_metric"
+}

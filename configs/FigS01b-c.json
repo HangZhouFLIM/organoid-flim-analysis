@@ -1,0 +1,22 @@
+{
+  "panel": "FigS01b-c",
+  "aliases": [],
+  "mode": "endpoint",
+  "input": "FigS01/object_exports/FigS01b-c_input.csv",
+  "observations": "FigS01/source_data/FigS01b-c_observations.csv",
+  "reference_statistics": "FigS01/statistics/FigS01b-c_reference_statistics.csv",
+  "reference": "first",
+  "statistical_unit": "exported observation",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "pixel_input_column": "source_pxdata",
+  "pixel_recipe": "arithmetic_finite_per_metric",
+  "measurement_rounding": {
+    "Int": 4,
+    "TauPhase": 9,
+    "TauModulation": 6
+  }
+}

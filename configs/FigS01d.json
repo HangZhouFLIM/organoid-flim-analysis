@@ -1,0 +1,8 @@
+{
+  "panel": "FigS01d",
+  "aliases": [],
+  "mode": "valid_percentage",
+  "input": "FigS01/source_data/FigS01d_input.csv",
+  "observations": null,
+  "reference_statistics": null
+}

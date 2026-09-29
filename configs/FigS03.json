@@ -1,0 +1,8 @@
+{
+  "panel": "FigS03",
+  "mode": "spectra",
+  "input": "FigS03/source_data/FigS03_excitation_scan.csv",
+  "observations": null,
+  "reference_statistics": null,
+  "aliases": []
+}

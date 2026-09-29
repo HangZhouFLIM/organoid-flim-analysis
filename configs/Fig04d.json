@@ -1,0 +1,12 @@
+{
+  "panel": "Fig04d",
+  "aliases": [
+    "FigS09"
+  ],
+  "mode": "calibration",
+  "input": "Fig04/source_data/Fig04d_input.csv",
+  "observations": "Fig04/source_data/Fig04d_observations.csv",
+  "reference_statistics": "Fig04/statistics/Fig04d_reference_statistics.csv",
+  "pixel_recipe": "calibration_common_positive_finite",
+  "pixel_input_column": "source_csv"
+}

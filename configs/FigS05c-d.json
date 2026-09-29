@@ -1,0 +1,38 @@
+{
+  "panel": "FigS05c-d",
+  "aliases": [],
+  "mode": "independent",
+  "input": "FigS05/object_exports/FigS05c-d_input.csv",
+  "observations": "FigS05/source_data/FigS05c-d_observations.csv",
+  "reference_statistics": "FigS05/statistics/FigS05c-d_reference_statistics.csv",
+  "reference": "mENR",
+  "test": "normality_two_group",
+  "adjustment": "holm",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "all_pairs": true,
+  "comparisons": [
+    [
+      "mENR",
+      "mOGM"
+    ],
+    [
+      "mENR",
+      "IM"
+    ],
+    [
+      "mOGM",
+      "IM"
+    ]
+  ],
+  "pixel_input_column": "source_pxdata",
+  "pixel_recipe": "arithmetic_finite_per_metric",
+  "measurement_rounding": {
+    "Int": 5,
+    "TauPhase": 6,
+    "TauModulation": 6
+  }
+}

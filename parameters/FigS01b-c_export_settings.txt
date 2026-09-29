@@ -1,0 +1,3 @@
+intensity threshold: 30-1360
+medium filter: 5
+color range: 0.33-0.80

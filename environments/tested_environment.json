@@ -1,0 +1,36 @@
+{
+  "python": "3.10.9",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "packages": {
+    "contourpy": "1.3.2",
+    "cycler": "0.12.1",
+    "fonttools": "4.65.0",
+    "ImageIO": "2.38.0",
+    "kiwisolver": "1.5.1",
+    "lazy-loader": "0.6",
+    "matplotlib": "3.10.9",
+    "networkx": "3.4.2",
+    "numpy": "2.2.6",
+    "packaging": "26.3",
+    "pandas": "2.3.3",
+    "pillow": "12.2.0",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "pytz": "2026.4",
+    "scikit-image": "0.25.2",
+    "scipy": "1.15.3",
+    "six": "1.17.0",
+    "tifffile": "2025.5.10",
+    "tzdata": "2026.4"
+  },
+  "scope": "Portable reproduction environment verified against every pinned requirement. Historical vendor and segmentation installations remain distinct.",
+  "requirements_sha256": "5676c76e250168077932cb43f37799e4f8d753e1249ae534101eea81379da67f",
+  "pip_check": "No broken requirements found.",
+  "portable_validation": {
+    "workflows": 43,
+    "regression_tests": 19,
+    "mode": "all numerical workflows; separate new spatial PNG/SVG replay",
+    "working_directory": "Separate from copied code and data root",
+    "bulk_hash_checks": true
+  }
+}

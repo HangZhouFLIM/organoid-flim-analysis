@@ -1,0 +1,1440 @@
+{
+  "schema_version": 1,
+  "scope": "Panel-linked inputs and asset counts; counts can overlap because companion panels share assets. Raw files support traceability; configured numerical starting points are unchanged.",
+  "workflows": [
+    {
+      "panel": "Fig01b-d",
+      "companion_panels": [],
+      "configuration": "configs/Fig01b-d.json",
+      "mode": "endpoint",
+      "starts_at": "Deposited pixel exports linked to selected measurements",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig01/object_exports/Fig01b-d_input.csv",
+        "observations": "Fig01/source_data/Fig01b-d_observations.csv",
+        "acquisition_settings": "Fig01/acquisition_metadata/Fig01b-d_acquisition_settings.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 280,
+        "pixel_exports": 56,
+        "masks": 7,
+        "GSLab_image_exports": 6,
+        "source_data": 3,
+        "acquisition_metadata": 2,
+        "object_exports": 1,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 56,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig01b-d"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig01b-d --output results"
+    },
+    {
+      "panel": "Fig01f-h",
+      "companion_panels": [],
+      "configuration": "configs/Fig01f-h.json",
+      "mode": "endpoint",
+      "starts_at": "Exact retained rows in deposited object exports",
+      "implementation": "reproduce.py; workflows/object_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig01/object_exports/Fig01f-h_input.csv",
+        "observations": "Fig01/source_data/Fig01f-h_observations.csv",
+        "reference_statistics": "Fig01/statistics/Fig01f-h_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 60,
+        "GSLab_image_exports": 48,
+        "object_exports": 13,
+        "masks": 12,
+        "segmentation_inputs": 12,
+        "acquisition_metadata": 2,
+        "statistics": 1,
+        "source_data": 1
+      },
+      "raw_acquisition_frame_groups": 12,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig01f-h"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig01f-h --output results"
+    },
+    {
+      "panel": "Fig01j-l",
+      "companion_panels": [],
+      "configuration": "configs/Fig01j-l.json",
+      "mode": "spatial_cells",
+      "starts_at": "Selected object exports and verified recovered anchor IDs",
+      "implementation": "workflows/spatial_cells.py; matlab/Fig01j-l/original",
+      "configuration_inputs": {
+        "input": "Fig01/acquisition_metadata/Fig01j-l_input_index.csv",
+        "intensity_reference": "Fig01/source_data/Fig01j-l/Fig01j-l_reference_intensity_per_sample.csv",
+        "phase_bins_reference": "Fig01/source_data/Fig01j-l/Fig01j-l_reference_phase_bins.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 25,
+        "GSLab_image_exports": 15,
+        "acquisition_metadata": 12,
+        "masks": 10,
+        "source_data": 10,
+        "segmentation_inputs": 5,
+        "object_exports": 5,
+        "figure_exports": 5
+      },
+      "raw_acquisition_frame_groups": 5,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig01j-l"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig01j-l --output results"
+    },
+    {
+      "panel": "Fig02d_cells",
+      "companion_panels": [
+        "Fig02d"
+      ],
+      "configuration": "configs/Fig02d_cells.json",
+      "mode": "independent",
+      "starts_at": "Exact retained rows in deposited object exports",
+      "implementation": "reproduce.py; workflows/object_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig02/object_exports/Fig02d_cells_input.csv",
+        "observations": "Fig02/source_data/Fig02d_cells_observations.csv",
+        "reference_statistics": "Fig02/statistics/Fig02d_cells_reference_statistics.csv",
+        "object_mask_index": "Fig02/acquisition_metadata/Fig02d_cells_mask_index.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 270,
+        "GSLab_image_exports": 114,
+        "masks": 37,
+        "object_exports": 28,
+        "acquisition_metadata": 2,
+        "statistics": 1,
+        "source_data": 1
+      },
+      "raw_acquisition_frame_groups": 54,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig02d",
+          "Fig02d_cells"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig02d_cells --output results"
+    },
+    {
+      "panel": "Fig02d_nuclei",
+      "companion_panels": [
+        "Fig02d"
+      ],
+      "configuration": "configs/Fig02d_nuclei.json",
+      "mode": "independent",
+      "starts_at": "Retained exported nuclear measurements",
+      "implementation": "reproduce.py",
+      "configuration_inputs": {
+        "input": "Fig02/object_exports/Fig02d_nuclei_input.csv",
+        "observations": "Fig02/source_data/Fig02d_nuclei_observations.csv",
+        "reference_statistics": "Fig02/statistics/Fig02d_nuclei_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "object_exports": 1,
+        "source_data": 1,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 0,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig02d",
+          "Fig02d_nuclei"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig02d_nuclei --output results"
+    },
+    {
+      "panel": "Fig03b",
+      "companion_panels": [],
+      "configuration": "configs/Fig03b.json",
+      "mode": "profile",
+      "starts_at": "Deposited pooled-bin summary",
+      "implementation": "reproduce.py",
+      "configuration_inputs": {
+        "input": "Fig03/source_data/Fig03b_input.csv"
+      },
+      "linked_asset_counts": {
+        "source_data": 1
+      },
+      "raw_acquisition_frame_groups": 0,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig03b"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig03b --output results"
+    },
+    {
+      "panel": "Fig03c",
+      "companion_panels": [
+        "FigS07d-g"
+      ],
+      "configuration": "configs/Fig03c.json",
+      "mode": "endpoint",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig03/source_data/Fig03c_input.csv",
+        "observations": "Fig03/source_data/Fig03c_observations.csv",
+        "reference_statistics": "Fig03/statistics/Fig03c_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 200,
+        "pixel_exports": 100,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 25,
+      "new_pixel_to_raw_links": 100,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig03c",
+          "FigS07d-g"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig03c --output results"
+    },
+    {
+      "panel": "Fig03d-h",
+      "companion_panels": [],
+      "configuration": "configs/Fig03d-h.json",
+      "mode": "endpoint",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig03/source_data/Fig03d-h_input.csv",
+        "observations": "Fig03/source_data/Fig03d-h_observations.csv",
+        "reference_statistics": "Fig03/statistics/Fig03d-h_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 344,
+        "pixel_exports": 258,
+        "masks": 170,
+        "GSLab_image_exports": 126,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 43,
+      "new_pixel_to_raw_links": 258,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig03d-h"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig03d-h --output results"
+    },
+    {
+      "panel": "Fig03i-m",
+      "companion_panels": [],
+      "configuration": "configs/Fig03i-m.json",
+      "mode": "independent",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig03/source_data/Fig03i-m_input.csv",
+        "observations": "Fig03/source_data/Fig03i-m_observations.csv",
+        "reference_statistics": "Fig03/statistics/Fig03i-m_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 224,
+        "GSLab_image_exports": 220,
+        "pixel_exports": 110,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 28,
+      "new_pixel_to_raw_links": 110,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig03i-m"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig03i-m --output results"
+    },
+    {
+      "panel": "Fig03m_lumen",
+      "companion_panels": [],
+      "configuration": "configs/Fig03m_lumen.json",
+      "mode": "independent",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig03/source_data/Fig03m_lumen_input.csv",
+        "observations": "Fig03/source_data/Fig03m_lumen_observations.csv",
+        "reference_statistics": "Fig03/statistics/Fig03m_lumen_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 224,
+        "pixel_exports": 28,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 28,
+      "new_pixel_to_raw_links": 28,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig03m_lumen"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig03m_lumen --output results"
+    },
+    {
+      "panel": "Fig03n-p",
+      "companion_panels": [
+        "FigS08m-o"
+      ],
+      "configuration": "configs/Fig03n-p.json",
+      "mode": "endpoint",
+      "starts_at": "Deposited field-level morphology measurements",
+      "implementation": "reproduce.py",
+      "configuration_inputs": {
+        "input": "Fig03/source_data/Fig03n-p_input.csv",
+        "observations": "Fig03/source_data/Fig03n-p_observations.csv",
+        "reference_statistics": "Fig03/statistics/Fig03n-p_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "masks": 18,
+        "raw_microscopy": 9,
+        "object_exports": 3,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 0,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig03n-p",
+          "FigS08m-o"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig03n-p --output results"
+    },
+    {
+      "panel": "Fig04c",
+      "companion_panels": [],
+      "configuration": "configs/Fig04c.json",
+      "mode": "paired",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig04/source_data/Fig04c_input.csv",
+        "observations": "Fig04/source_data/Fig04c_observations.csv",
+        "reference_statistics": "Fig04/statistics/Fig04c_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 56,
+        "pixel_exports": 14,
+        "masks": 6,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 7,
+      "new_pixel_to_raw_links": 14,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig04c"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig04c --output results"
+    },
+    {
+      "panel": "Fig04d",
+      "companion_panels": [
+        "FigS09"
+      ],
+      "configuration": "configs/Fig04d.json",
+      "mode": "calibration",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py; workflows/specialized_outputs.py",
+      "configuration_inputs": {
+        "input": "Fig04/source_data/Fig04d_input.csv",
+        "observations": "Fig04/source_data/Fig04d_observations.csv",
+        "reference_statistics": "Fig04/statistics/Fig04d_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 200,
+        "pixel_exports": 40,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 40,
+      "new_pixel_to_raw_links": 40,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig04d",
+          "FigS09"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig04d --output results"
+    },
+    {
+      "panel": "Fig04g-h",
+      "companion_panels": [],
+      "configuration": "configs/Fig04g-h.json",
+      "mode": "endpoint",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig04/source_data/Fig04g-h_input.csv",
+        "observations": "Fig04/source_data/Fig04g-h_observations.csv",
+        "reference_statistics": "Fig04/statistics/Fig04g-h_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 216,
+        "pixel_exports": 52,
+        "masks": 13,
+        "GSLab_image_exports": 11,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 27,
+      "new_pixel_to_raw_links": 52,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig04g-h"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig04g-h --output results"
+    },
+    {
+      "panel": "Fig05b",
+      "companion_panels": [],
+      "configuration": "configs/Fig05b.json",
+      "mode": "endpoint",
+      "starts_at": "NAD(P)H pixels and final measurement masks",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig05/source_data/Fig05b_input.csv",
+        "observations": "Fig05/source_data/Fig05b_observations.csv",
+        "reference_statistics": "Fig05/statistics/Fig05b_reference_statistics.csv",
+        "measurement_mask_index": "Fig05/acquisition_metadata/Fig05b_measurement_mask_index.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 150,
+        "pixel_exports": 45,
+        "masks": 15,
+        "source_data": 2,
+        "statistics": 1,
+        "acquisition_metadata": 1
+      },
+      "raw_acquisition_frame_groups": 15,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig05b"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig05b --output results"
+    },
+    {
+      "panel": "Fig05d",
+      "companion_panels": [],
+      "configuration": "configs/Fig05d.json",
+      "mode": "endpoint",
+      "starts_at": "NAD(P)H pixels and final measurement masks",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig05/source_data/Fig05d_input.csv",
+        "observations": "Fig05/source_data/Fig05d_observations.csv",
+        "reference_statistics": "Fig05/statistics/Fig05d_reference_statistics.csv",
+        "measurement_mask_index": "Fig05/acquisition_metadata/Fig05d_measurement_mask_index.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 150,
+        "pixel_exports": 45,
+        "masks": 15,
+        "source_data": 2,
+        "statistics": 1,
+        "acquisition_metadata": 1
+      },
+      "raw_acquisition_frame_groups": 15,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig05d"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig05d --output results"
+    },
+    {
+      "panel": "Fig05f",
+      "companion_panels": [],
+      "configuration": "configs/Fig05f.json",
+      "mode": "endpoint",
+      "starts_at": "NAD(P)H pixels and final measurement masks",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig05/source_data/Fig05f_input.csv",
+        "observations": "Fig05/source_data/Fig05f_observations.csv",
+        "reference_statistics": "Fig05/statistics/Fig05f_reference_statistics.csv",
+        "measurement_mask_index": "Fig05/acquisition_metadata/Fig05f_measurement_mask_index.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 189,
+        "pixel_exports": 54,
+        "masks": 54,
+        "source_data": 2,
+        "acquisition_metadata": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 27,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig05f"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig05f --output results"
+    },
+    {
+      "panel": "Fig05h",
+      "companion_panels": [],
+      "configuration": "configs/Fig05h.json",
+      "mode": "endpoint",
+      "starts_at": "NAD(P)H pixels and final measurement masks",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig05/source_data/Fig05h_input.csv",
+        "observations": "Fig05/source_data/Fig05h_observations.csv",
+        "reference_statistics": "Fig05/statistics/Fig05h_reference_statistics.csv",
+        "measurement_mask_index": "Fig05/acquisition_metadata/Fig05h_measurement_mask_index.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 200,
+        "masks": 80,
+        "pixel_exports": 60,
+        "acquisition_metadata": 2,
+        "source_data": 2,
+        "statistics": 1,
+        "object_exports": 1
+      },
+      "raw_acquisition_frame_groups": 20,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig05h"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig05h --output results"
+    },
+    {
+      "panel": "Fig05j",
+      "companion_panels": [],
+      "configuration": "configs/Fig05j.json",
+      "mode": "endpoint",
+      "starts_at": "NAD(P)H pixels and final measurement masks",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig05/source_data/Fig05j_input.csv",
+        "observations": "Fig05/source_data/Fig05j_observations.csv",
+        "reference_statistics": "Fig05/statistics/Fig05j_reference_statistics.csv",
+        "measurement_mask_index": "Fig05/acquisition_metadata/Fig05j_measurement_mask_index.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 230,
+        "masks": 92,
+        "pixel_exports": 69,
+        "acquisition_metadata": 2,
+        "source_data": 2,
+        "statistics": 1,
+        "object_exports": 1
+      },
+      "raw_acquisition_frame_groups": 23,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig05j"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig05j --output results"
+    },
+    {
+      "panel": "Fig06b",
+      "companion_panels": [],
+      "configuration": "configs/Fig06b.json",
+      "mode": "endpoint",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig06/source_data/Fig06b_input.csv",
+        "observations": "Fig06/source_data/Fig06b_observations.csv",
+        "reference_statistics": "Fig06/statistics/Fig06b_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 140,
+        "masks": 112,
+        "pixel_exports": 56,
+        "GSLab_image_exports": 18,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 28,
+      "new_pixel_to_raw_links": 56,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig06b"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig06b --output results"
+    },
+    {
+      "panel": "Fig06d",
+      "companion_panels": [],
+      "configuration": "configs/Fig06d.json",
+      "mode": "independent",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "Fig06/source_data/Fig06d_input.csv",
+        "observations": "Fig06/source_data/Fig06d_observations.csv",
+        "reference_statistics": "Fig06/statistics/Fig06d_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 136,
+        "masks": 34,
+        "GSLab_image_exports": 17,
+        "pixel_exports": 17,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 17,
+      "new_pixel_to_raw_links": 17,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig06d"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig06d --output results"
+    },
+    {
+      "panel": "Fig06g",
+      "companion_panels": [],
+      "configuration": "configs/Fig06g.json",
+      "mode": "nile",
+      "starts_at": "Deposited regional measurements",
+      "implementation": "reproduce.py; workflows/specialized_outputs.py",
+      "configuration_inputs": {
+        "input": "Fig06/source_data/Fig06g_input.csv",
+        "observations": "Fig06/source_data/Fig06g_observations.csv",
+        "reference_statistics": "Fig06/statistics/Fig06g_reference_statistics.csv",
+        "emission_reference": "Fig06/statistics/Fig06g_combined_channel_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 88,
+        "pixel_exports": 48,
+        "masks": 16,
+        "acquisition_metadata": 9,
+        "source_data": 4,
+        "statistics": 2
+      },
+      "raw_acquisition_frame_groups": 8,
+      "new_pixel_to_raw_links": 48,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "Fig06g"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel Fig06g --output results"
+    },
+    {
+      "panel": "FigS01b-c",
+      "companion_panels": [],
+      "configuration": "configs/FigS01b-c.json",
+      "mode": "endpoint",
+      "starts_at": "Deposited pixel exports linked to selected measurements",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS01/object_exports/FigS01b-c_input.csv",
+        "observations": "FigS01/source_data/FigS01b-c_observations.csv",
+        "reference_statistics": "FigS01/statistics/FigS01b-c_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 90,
+        "pixel_exports": 18,
+        "masks": 18,
+        "GSLab_image_exports": 9,
+        "acquisition_metadata": 2,
+        "statistics": 1,
+        "object_exports": 1,
+        "source_data": 1
+      },
+      "raw_acquisition_frame_groups": 18,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS01b-c"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS01b-c --output results"
+    },
+    {
+      "panel": "FigS01d",
+      "companion_panels": [],
+      "configuration": "configs/FigS01d.json",
+      "mode": "valid_percentage",
+      "starts_at": "Deposited ROI counts",
+      "implementation": "reproduce.py",
+      "configuration_inputs": {
+        "input": "FigS01/source_data/FigS01d_input.csv"
+      },
+      "linked_asset_counts": {
+        "masks": 12,
+        "object_exports": 1,
+        "source_data": 1,
+        "raw_for_GSLab": 60
+      },
+      "raw_acquisition_frame_groups": 12,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS01d"
+        ],
+        "raw_input_companion_panels": [
+          "Fig01f-h"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS01d --output results",
+      "shared_raw_input_workflows": [
+        "Fig01f-h"
+      ],
+      "shared_input_evidence": "Exact same 12 deposited masks as Fig01f-h; raw input sets are linked from that companion workflow."
+    },
+    {
+      "panel": "FigS02",
+      "companion_panels": [],
+      "configuration": "configs/FigS02.json",
+      "mode": "endpoint",
+      "starts_at": "Exact retained rows in deposited object exports",
+      "implementation": "reproduce.py; workflows/object_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS02/object_exports/FigS02_input.csv",
+        "observations": "FigS02/source_data/FigS02_observations.csv",
+        "reference_statistics": "FigS02/statistics/FigS02_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "GSLab_image_exports": 72,
+        "object_exports": 25,
+        "raw_for_GSLab": 20,
+        "masks": 4,
+        "segmentation_inputs": 4,
+        "acquisition_metadata": 2,
+        "statistics": 1,
+        "source_data": 1
+      },
+      "raw_acquisition_frame_groups": 4,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS02"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS02 --output results"
+    },
+    {
+      "panel": "FigS02_ROI",
+      "companion_panels": [],
+      "configuration": "configs/FigS02_ROI.json",
+      "mode": "valid_percentage",
+      "starts_at": "Deposited ROI counts",
+      "implementation": "reproduce.py",
+      "configuration_inputs": {
+        "input": "FigS02/source_data/FigS02_ROI_input.csv"
+      },
+      "linked_asset_counts": {
+        "object_exports": 12,
+        "masks": 4,
+        "source_data": 1,
+        "raw_for_GSLab": 20
+      },
+      "raw_acquisition_frame_groups": 4,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS02_ROI"
+        ],
+        "raw_input_companion_panels": [
+          "FigS02"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS02_ROI --output results",
+      "shared_raw_input_workflows": [
+        "FigS02"
+      ],
+      "shared_input_evidence": "Exact same 4 deposited masks as FigS02; raw input sets are linked from that companion workflow."
+    },
+    {
+      "panel": "FigS03",
+      "companion_panels": [],
+      "configuration": "configs/FigS03.json",
+      "mode": "spectra",
+      "starts_at": "Deposited excitation-scan values",
+      "implementation": "reproduce.py",
+      "configuration_inputs": {
+        "input": "FigS03/source_data/FigS03_excitation_scan.csv"
+      },
+      "linked_asset_counts": {
+        "raw_microscopy": 28,
+        "object_exports": 2,
+        "source_data": 1
+      },
+      "raw_acquisition_frame_groups": 0,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS03"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS03 --output results"
+    },
+    {
+      "panel": "FigS05c-d",
+      "companion_panels": [],
+      "configuration": "configs/FigS05c-d.json",
+      "mode": "independent",
+      "starts_at": "Deposited pixel exports linked to selected measurements",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS05/object_exports/FigS05c-d_input.csv",
+        "observations": "FigS05/source_data/FigS05c-d_observations.csv",
+        "reference_statistics": "FigS05/statistics/FigS05c-d_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 195,
+        "GSLab_image_exports": 144,
+        "pixel_exports": 39,
+        "masks": 39,
+        "statistics": 1,
+        "source_data": 1,
+        "object_exports": 1,
+        "acquisition_metadata": 1
+      },
+      "raw_acquisition_frame_groups": 39,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS05c-d"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS05c-d --output results"
+    },
+    {
+      "panel": "FigS07b",
+      "companion_panels": [],
+      "configuration": "configs/FigS07b.json",
+      "mode": "scrna",
+      "starts_at": "Deposited source-sample module scores",
+      "implementation": "reproduce.py; workflows/specialized_outputs.py",
+      "configuration_inputs": {
+        "input": "FigS07/source_data/FigS07b_sample_level_scores.csv",
+        "summary_reference": "FigS07/source_data/FigS07b_four_cell_pathway_equal_sample_weighted_means.tsv"
+      },
+      "linked_asset_counts": {
+        "source_data": 2
+      },
+      "raw_acquisition_frame_groups": 0,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS07b"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS07b --output results"
+    },
+    {
+      "panel": "FigS07c",
+      "companion_panels": [],
+      "configuration": "configs/FigS07c.json",
+      "mode": "scrna",
+      "starts_at": "Deposited source-sample module scores",
+      "implementation": "reproduce.py; workflows/specialized_outputs.py",
+      "configuration_inputs": {
+        "input": "FigS07/source_data/FigS07c_sample_level_scores.csv",
+        "summary_reference": "FigS07/source_data/FigS07c_complex_v_enterocyte_difference_by_sample.tsv"
+      },
+      "linked_asset_counts": {
+        "source_data": 3
+      },
+      "raw_acquisition_frame_groups": 0,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS07c"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS07c --output results"
+    },
+    {
+      "panel": "FigS07j-k",
+      "companion_panels": [],
+      "configuration": "configs/FigS07j-k.json",
+      "mode": "paired",
+      "starts_at": "Deposited pixel exports and recorded ROI bounds",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS07/source_data/FigS07j-k_input.csv",
+        "observations": "FigS07/source_data/FigS07j-k_observations.csv",
+        "reference_statistics": "FigS07/statistics/FigS07j-k_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 48,
+        "GSLab_image_exports": 12,
+        "pixel_exports": 6,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 6,
+      "new_pixel_to_raw_links": 6,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS07j-k"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS07j-k --output results"
+    },
+    {
+      "panel": "FigS07l-n",
+      "companion_panels": [],
+      "configuration": "configs/FigS07l-n.json",
+      "mode": "independent",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS07/source_data/FigS07l-n_input.csv",
+        "observations": "FigS07/source_data/FigS07l-n_observations.csv",
+        "reference_statistics": "FigS07/statistics/FigS07l-n_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 216,
+        "pixel_exports": 27,
+        "GSLab_image_exports": 14,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 27,
+      "new_pixel_to_raw_links": 27,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS07l-n"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS07l-n --output results"
+    },
+    {
+      "panel": "FigS08a-e",
+      "companion_panels": [],
+      "configuration": "configs/FigS08a-e.json",
+      "mode": "endpoint",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS08/source_data/FigS08a-e_input.csv",
+        "observations": "FigS08/source_data/FigS08a-e_observations.csv",
+        "reference_statistics": "FigS08/statistics/FigS08a-e_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 336,
+        "pixel_exports": 252,
+        "masks": 164,
+        "GSLab_image_exports": 120,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 42,
+      "new_pixel_to_raw_links": 252,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS08a-e"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS08a-e --output results"
+    },
+    {
+      "panel": "FigS08g-i",
+      "companion_panels": [],
+      "configuration": "configs/FigS08g-i.json",
+      "mode": "timelapse",
+      "starts_at": "Deposited time-resolved image summaries",
+      "implementation": "reproduce.py",
+      "configuration_inputs": {
+        "input": "FigS08/source_data/FigS08g-i_input.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 186,
+        "pixel_exports": 60,
+        "masks": 60,
+        "GSLab_image_exports": 40,
+        "source_data": 1
+      },
+      "raw_acquisition_frame_groups": 30,
+      "new_pixel_to_raw_links": 60,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS08g-i"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS08g-i --output results"
+    },
+    {
+      "panel": "FigS08j-l",
+      "companion_panels": [],
+      "configuration": "configs/FigS08j-l.json",
+      "mode": "timelapse",
+      "starts_at": "Deposited time-resolved image summaries",
+      "implementation": "reproduce.py",
+      "configuration_inputs": {
+        "input": "FigS08/source_data/FigS08j-l_input.csv"
+      },
+      "linked_asset_counts": {
+        "source_data": 1
+      },
+      "raw_acquisition_frame_groups": 0,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS08j-l"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS08j-l --output results"
+    },
+    {
+      "panel": "FigS10b",
+      "companion_panels": [
+        "FigS10a"
+      ],
+      "configuration": "configs/FigS10b.json",
+      "mode": "paired",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS10/source_data/FigS10b_input.csv",
+        "observations": "FigS10/source_data/FigS10b_observations.csv",
+        "reference_statistics": "FigS10/statistics/FigS10b_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "masks": 90,
+        "raw_for_GSLab": 75,
+        "pixel_exports": 30,
+        "source_data": 2,
+        "statistics": 1,
+        "acquisition_metadata": 1
+      },
+      "raw_acquisition_frame_groups": 15,
+      "new_pixel_to_raw_links": 30,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS10a",
+          "FigS10b"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS10b --output results"
+    },
+    {
+      "panel": "FigS10c-h",
+      "companion_panels": [],
+      "configuration": "configs/FigS10c-h.json",
+      "mode": "paired",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS10/source_data/FigS10c-h_input.csv",
+        "observations": "FigS10/source_data/FigS10c-h_observations.csv",
+        "reference_statistics": "FigS10/statistics/FigS10c-h_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "GSLab_image_exports": 108,
+        "raw_for_GSLab": 99,
+        "pixel_exports": 54,
+        "masks": 36,
+        "source_data": 2,
+        "statistics": 1,
+        "acquisition_metadata": 1
+      },
+      "raw_acquisition_frame_groups": 9,
+      "new_pixel_to_raw_links": 54,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS10c-h"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS10c-h --output results"
+    },
+    {
+      "panel": "FigS10i-l",
+      "companion_panels": [],
+      "configuration": "configs/FigS10i-l.json",
+      "mode": "paired",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS10/source_data/FigS10i-l_input.csv",
+        "observations": "FigS10/source_data/FigS10i-l_observations.csv",
+        "reference_statistics": "FigS10/statistics/FigS10i-l_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 120,
+        "masks": 61,
+        "pixel_exports": 60,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 15,
+      "new_pixel_to_raw_links": 60,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS10i-l"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS10i-l --output results"
+    },
+    {
+      "panel": "FigS11b",
+      "companion_panels": [],
+      "configuration": "configs/FigS11b.json",
+      "mode": "endpoint",
+      "starts_at": "Final masks/pixels where recovered; archived means for one missing mask",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS11/source_data/FigS11b_input.csv",
+        "observations": "FigS11/source_data/FigS11b_observations.csv",
+        "reference_statistics": "FigS11/statistics/FigS11b_reference_statistics.csv",
+        "measurement_mask_index": "FigS11/acquisition_metadata/FigS11b_measurement_mask_index.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 189,
+        "pixel_exports": 54,
+        "masks": 26,
+        "source_data": 2,
+        "statistics": 1,
+        "acquisition_metadata": 1
+      },
+      "raw_acquisition_frame_groups": 27,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS11b"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS11b --output results"
+    },
+    {
+      "panel": "FigS11c",
+      "companion_panels": [],
+      "configuration": "configs/FigS11c.json",
+      "mode": "endpoint",
+      "starts_at": "NAD(P)H pixels and final measurement masks",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS11/source_data/FigS11c_input.csv",
+        "observations": "FigS11/source_data/FigS11c_observations.csv",
+        "reference_statistics": "FigS11/statistics/FigS11c_reference_statistics.csv",
+        "measurement_mask_index": "FigS11/acquisition_metadata/FigS11c_measurement_mask_index.csv"
+      },
+      "linked_asset_counts": {
+        "masks": 80,
+        "pixel_exports": 60,
+        "source_data": 2,
+        "statistics": 1,
+        "object_exports": 1,
+        "acquisition_metadata": 1,
+        "raw_for_GSLab": 200
+      },
+      "raw_acquisition_frame_groups": 20,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS11c"
+        ],
+        "raw_input_companion_panels": [
+          "Fig05h"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS11c --output results",
+      "shared_raw_input_workflows": [
+        "Fig05h"
+      ],
+      "shared_input_evidence": "Exact same 60 deposited pixel_exports as Fig05h; raw input sets are linked from that companion workflow."
+    },
+    {
+      "panel": "FigS11d",
+      "companion_panels": [],
+      "configuration": "configs/FigS11d.json",
+      "mode": "endpoint",
+      "starts_at": "NAD(P)H pixels and final measurement masks",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS11/source_data/FigS11d_input.csv",
+        "observations": "FigS11/source_data/FigS11d_observations.csv",
+        "reference_statistics": "FigS11/statistics/FigS11d_reference_statistics.csv",
+        "measurement_mask_index": "FigS11/acquisition_metadata/FigS11d_measurement_mask_index.csv"
+      },
+      "linked_asset_counts": {
+        "masks": 92,
+        "pixel_exports": 69,
+        "source_data": 2,
+        "statistics": 1,
+        "object_exports": 1,
+        "acquisition_metadata": 1,
+        "raw_for_GSLab": 230
+      },
+      "raw_acquisition_frame_groups": 23,
+      "new_pixel_to_raw_links": 0,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS11d"
+        ],
+        "raw_input_companion_panels": [
+          "Fig05j"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS11d --output results",
+      "shared_raw_input_workflows": [
+        "Fig05j"
+      ],
+      "shared_input_evidence": "Exact same 69 deposited pixel_exports as Fig05j; raw input sets are linked from that companion workflow."
+    },
+    {
+      "panel": "FigS12b",
+      "companion_panels": [],
+      "configuration": "configs/FigS12b.json",
+      "mode": "endpoint",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS12/source_data/FigS12b_input.csv",
+        "observations": "FigS12/source_data/FigS12b_observations.csv",
+        "reference_statistics": "FigS12/statistics/FigS12b_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 220,
+        "masks": 144,
+        "GSLab_image_exports": 132,
+        "pixel_exports": 88,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 44,
+      "new_pixel_to_raw_links": 88,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS12b"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS12b --output results"
+    },
+    {
+      "panel": "FigS12d",
+      "companion_panels": [],
+      "configuration": "configs/FigS12d.json",
+      "mode": "paired",
+      "starts_at": "Deposited pixel exports",
+      "implementation": "reproduce.py; workflows/pixel_measurements.py",
+      "configuration_inputs": {
+        "input": "FigS12/source_data/FigS12d_input.csv",
+        "observations": "FigS12/source_data/FigS12d_observations.csv",
+        "reference_statistics": "FigS12/statistics/FigS12d_reference_statistics.csv"
+      },
+      "linked_asset_counts": {
+        "raw_for_GSLab": 64,
+        "pixel_exports": 16,
+        "source_data": 2,
+        "statistics": 1
+      },
+      "raw_acquisition_frame_groups": 8,
+      "new_pixel_to_raw_links": 16,
+      "raw_acquisition_index": "metadata/GSLab_input_index.csv",
+      "pixel_to_raw_lookup": "metadata/pixel_to_raw_acquisition.csv",
+      "earlier_acquisition_lookup": "metadata/new_acquisition_index.csv",
+      "asset_lookup": {
+        "file": "metadata/file_manifest.csv",
+        "panels": [
+          "FigS12d"
+        ]
+      },
+      "command": "python reproduce.py --data-root ../01_Zenodo_data --panel FigS12d --output results"
+    }
+  ]
+}

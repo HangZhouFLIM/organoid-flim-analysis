@@ -1,0 +1,15 @@
+{
+  "panel": "FigS11d",
+  "aliases": [],
+  "mode": "endpoint",
+  "input": "FigS11/source_data/FigS11d_input.csv",
+  "observations": "FigS11/source_data/FigS11d_observations.csv",
+  "reference_statistics": "FigS11/statistics/FigS11d_reference_statistics.csv",
+  "reference": "control",
+  "metrics": [
+    "Int",
+    "TauPhase",
+    "TauModulation"
+  ],
+  "measurement_mask_index": "FigS11/acquisition_metadata/FigS11d_measurement_mask_index.csv"
+}
