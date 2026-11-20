@@ -2,7 +2,7 @@
 
 This public repository contains the analysis code for Figures 1–6 and Supplementary Figures S1–S15 of the intestinal organoid FLIM manuscript. Start with the [manuscript panel guide](docs/MANUSCRIPT_PANELS.md) to find the command and input files for a published panel. The [downloadable crosswalk](docs/manuscript_panel_crosswalk.csv) maps the 43 original workflow keys to the manuscript’s final numbering.
 
-On 20 November 2026, the Zenodo record was a draft with a reserved DOI. Extract `01_Zenodo_data.rar` and `02_manuscript_figure_data.zip` when you have access to the files. The first contains the selected acquisition and measurement exports. The second contains the final artwork, fitting inputs and parameters, S9 transcriptomic plot data, tables and videos. [Reserved Zenodo DOI](https://doi.org/10.5281/zenodo.23103396)
+Download both archives from the [published Zenodo dataset](https://zenodo.org/records/23103396) (DOI `10.5281/zenodo.23103396`) and extract them beside the code folder. `01_Zenodo_data.rar` contains the acquisition and measurement exports. `02_manuscript_figure_data.zip` contains the final figures, fitting data, Figure S9 transcriptomic plot data, supplementary tables and videos.
 
 ## Install and run
 

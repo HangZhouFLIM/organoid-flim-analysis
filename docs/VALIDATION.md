@@ -1,6 +1,6 @@
 # Release coverage and acceptance
 
-This public repository accompanies the two manuscript data packages. On 20 November 2026 the Zenodo record was a draft with reserved DOI 10.5281/zenodo.23103396. The counts below describe the original `01_Zenodo_data.rar` validation. Coverage of the second archive is given in the [manuscript panel guide](MANUSCRIPT_PANELS.md).
+This public repository accompanies the two manuscript data packages. Both archives were published on 20 November 2026 under DOI [10.5281/zenodo.23103396](https://doi.org/10.5281/zenodo.23103396). Their sizes and MD5 checksums match the files listed in the [Zenodo record](https://zenodo.org/records/23103396). The counts below describe the original `01_Zenodo_data.rar` validation. Coverage of the second archive is given in the [manuscript panel guide](MANUSCRIPT_PANELS.md).
 
 ## Verified contents
 
