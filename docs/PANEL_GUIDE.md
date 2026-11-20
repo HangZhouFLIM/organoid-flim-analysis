@@ -1,5 +1,7 @@
 # Panel guide
 
+The keys below belong to the original data archive. Use the [manuscript crosswalk](manuscript_panel_crosswalk.csv) and [final panel guide](MANUSCRIPT_PANELS.md) when looking up the current figure numbers.
+
 See [Methods-to-code map](METHODS_CODE_MAP.md), [panel input counts](PANEL_INPUTS.csv) and the [Figure 1j-l guide](FIG01J_L.md). `python reproduce.py --list-panels` lists all 43 configured workflows.
 
 | Panel/workflow | Companion panels | Starting point | Archived P checks | Configuration |

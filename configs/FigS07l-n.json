@@ -2,6 +2,8 @@
   "panel": "FigS07l-n",
   "aliases": [],
   "mode": "independent",
+  "manuscript_panels": ["S9K"],
+  "display_channel": "Rhodamine 123",
   "input": "FigS07/source_data/FigS07l-n_input.csv",
   "observations": "FigS07/source_data/FigS07l-n_observations.csv",
   "reference_statistics": "FigS07/statistics/FigS07l-n_reference_statistics.csv",

@@ -1,48 +1,29 @@
 # Organoid FLIM analysis
 
-This repository accompanies the figure-linked intestinal organoid FLIM analyses in Results 1–6 and their supplementary figures. Its companion data package is `01_Zenodo_data`; the Zenodo DOI is pending. Imaging data are distributed separately from this code repository. The main entry point uses only deposited files and Python dependencies. Figure configurations select the original statistical branches, pairings and correction families.
+This public repository contains the analysis code for Figures 1–6 and Supplementary Figures S1–S15 of the intestinal organoid FLIM manuscript. Start with the [manuscript panel guide](docs/MANUSCRIPT_PANELS.md) to find the command and input files for a published panel. The [downloadable crosswalk](docs/manuscript_panel_crosswalk.csv) maps the 43 original workflow keys to the manuscript’s final numbering.
 
-## Install
+On 20 November 2026, the Zenodo record was a draft with a reserved DOI. Extract `01_Zenodo_data.rar` and `02_manuscript_figure_data.zip` when you have access to the files. The first contains the selected acquisition and measurement exports. The second contains the final artwork, fitting inputs and parameters, S9 transcriptomic plot data, tables and videos. [Reserved Zenodo DOI](https://doi.org/10.5281/zenodo.23103396)
 
-Open a terminal in this folder. Use Python 3.10 (the validated version is recorded under `environments/`). Create a virtual environment, activate it, then install:
+## Install and run
+
+Use Python 3.10. The original imaging workflows were validated with Python 3.10.9. In a virtual environment, run these commands from the repository root.
 
 ```sh
 python -m pip install -r environments/requirements-lock.txt
-```
-
-## Run
-
-```sh
 python reproduce.py --data-root ../01_Zenodo_data --verify-only
 python reproduce.py --data-root ../01_Zenodo_data --panel Fig05b --output results
 python reproduce.py --data-root ../01_Zenodo_data --all --output results
+python reproduce_companion.py --data-root ../02_manuscript_figure_data --panel S7 --output results
+python reproduce_companion.py --data-root ../02_manuscript_figure_data --panel S9C --output results
 python -m unittest discover -s tests
 ```
 
-Input paths are resolved from `--data-root`, not the current workstation. Outputs are written to the requested output directory. The default verifies deposited file checksums before calculation; `--skip-hashes` is for repeated local debugging only. `--no-plots` performs numerical checks without rendering plots.
+`--data-root` accepts the path to the extracted data folder. The original entry point checks file hashes before calculation. It writes results, numerical comparisons with the archived reference tables, plots and a run report to the output folder. `--no-plots` runs its numerical checks alone. `--skip-hashes` skips bulk file hashes during repeat runs. Existing figure configurations retain the original statistical branches, pairings and multiple-comparison families.
 
-Each workflow exports recalculated summaries/statistics, comparison checks against the archived reference results, and PNG/SVG plots. `reproduction_report.csv` records successes and failures. Nonzero exit status indicates a computation error, mismatch or unmapped reference comparison. Plots reproduce the numerical analyses; they do not automatically reconstruct manually assembled manuscript composite layouts.
+The companion entry point reconstructs the published fit summaries from the saved per-cell or per-ROI fits. S7 retains the distinction between summaries across cells and summaries that weight each image equally. S9A renders the stored embedding, and S9C renders lineage-level mean expression and detection percentages. The complete, manually assembled figure artwork is supplied in the companion ZIP. [Companion inputs and commands](docs/MANUSCRIPT_PANELS.md)
 
-## Data flow
+## Imaging provenance
 
-Figure configuration -> deposited pixel / mask / object inputs -> per-image or per-object observations -> summaries -> statistical comparisons -> figures. Calibration phasor centroids remain intensity-weighted; Native acquisition-to-FLIM conversion and historical manual ROIs are done in LAS X  and GSLab.
+The original analyses start from the deposited pixel, mask, object or summary exports identified in each configuration. The acquisition channels and original XML files are linked to exported measurements through `metadata/pixel_to_raw_acquisition.csv`. `metadata/missing_inputs.csv` identifies unresolved historical inputs. LAS X and GSLab were used for the upstream acquisition and FLIM exports. [Processing scope](docs/REPRODUCIBILITY.md)
 
-`workflows/reporter_masks.py` contains selected original segmentation functions with explicit parameters. Final measurement masks and their coordinate origins are indexed in the data package. `manifests/processing_parameters.json` records the common settings; available per-image Cellpose settings are deposited with their masks;  Original model weights/software versions were not inferred from a present-day installation.
-
-## Reproducibility boundaries
-
-Read the data package's `metadata/missing_inputs.csv` and this folder's `docs/REPRODUCIBILITY.md`. Native raw files, final representative-image assignments and upstream FLIM data export and export were done in LAS X and GSLab.
-See `metadata.json`; the Zenodo DOI, authors and licences require confirmation before public release. The code repository URL is recorded; the repository is currently private. Upstream code hashes are recorded in `docs/upstream_code_provenance.csv`. No cloud credentials or local environment directories are required.
-
-## Navigation
-
-- [Methods-to-code map](docs/METHODS_CODE_MAP.md) and [CSV](docs/METHODS_CODE_MAP.csv)
-- [Panel guide](docs/PANEL_GUIDE.md)
-- [Figure 1j-l spatial analysis](docs/FIG01J_L.md)
-- [Validation and remaining gaps](docs/VALIDATION.md)
-
-Figure 2d is one combined condition/sample collection. Its code reads the exact source object rows, rebuilds the recorded exclusion-mask combinations and checks cell areas and centroids. The new acquisition crosswalk is `metadata/new_acquisition_index.csv` in the data package.
-
-The companion data folder separates `raw_for_GSLab`, `GSLab_image_exports` and `masks` across every figure. See [the folder guide](docs/DATA_FOLDER_STRUCTURE.md). Figure 1 uses all eight acquisition settings (56 acquisitions), with the author grouping recorded in `parameters/Fig01b-d_acquisition_settings.csv`.
-
-Raw acquisition channel sets and original XML are now linked to the newly resolved exports in `metadata/pixel_to_raw_acquisition.csv`. Both normal runs and `--verify-only` check raw channel groups, XML and these crosswalk links.
+Figure 1 uses eight acquisition settings across 56 acquisitions. Figure 2D combines the selected conditions and samples in one collection. Its workflow rebuilds the recorded exclusion-mask combinations and checks cell areas and centroids against the deposited object rows. [Methods and code](docs/METHODS_CODE_MAP.md) · [Original panel guide](docs/PANEL_GUIDE.md) · [Figure 1J–L](docs/FIG01J_L.md) · [Data folder guide](docs/DATA_FOLDER_STRUCTURE.md) · [Validation](docs/VALIDATION.md)

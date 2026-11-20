@@ -1,5 +1,7 @@
 # Scope of verified reproduction
 
+The scope below describes the original imaging archive and the `reproduce.py` entry point. The companion archive adds the submitted artwork, S9 plotting values and fit checkpoints. [Manuscript panel guide](MANUSCRIPT_PANELS.md)
+
 The workflow starts at the deposited processed exports and accepted masks. Raw microscope-to-FLIM processing requires original native files and dataset-specific vendor calibration/processing settings that are not fully available here.
 
 The statistical unit is preserved per dataset. Differentiation distributions remain pooled cell/nuclear analyses where organoid identifiers were not retained. Other endpoint inputs are image/FOV summaries unless additional biological hierarchy is documented. Phasor trajectories, pooled spatial profiles and time courses remain descriptive unless an explicit test is implemented.

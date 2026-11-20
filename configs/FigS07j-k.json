@@ -2,6 +2,8 @@
   "panel": "FigS07j-k",
   "aliases": [],
   "mode": "paired",
+  "manuscript_panels": ["S9L", "S9M", "S9N"],
+  "display_channel": "Rhodamine 123",
   "input": "FigS07/source_data/FigS07j-k_input.csv",
   "observations": "FigS07/source_data/FigS07j-k_observations.csv",
   "reference_statistics": "FigS07/statistics/FigS07j-k_reference_statistics.csv",

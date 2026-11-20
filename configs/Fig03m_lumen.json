@@ -2,6 +2,7 @@
   "panel": "Fig03m_lumen",
   "aliases": [],
   "mode": "independent",
+  "manuscript_panels": ["3J"],
   "input": "Fig03/source_data/Fig03m_lumen_input.csv",
   "observations": "Fig03/source_data/Fig03m_lumen_observations.csv",
   "reference_statistics": "Fig03/statistics/Fig03m_lumen_reference_statistics.csv",

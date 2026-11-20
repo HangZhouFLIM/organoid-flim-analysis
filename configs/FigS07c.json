@@ -1,6 +1,8 @@
 {
   "panel": "FigS07c",
   "mode": "scrna",
+  "manuscript_panels": [],
+  "scope": "Historical nuclear complex-V module scores and source-sample enterocyte contrasts; no plotted panel in the final manuscript.",
   "input": "FigS07/source_data/FigS07c_sample_level_scores.csv",
   "observations": null,
   "reference_statistics": null,

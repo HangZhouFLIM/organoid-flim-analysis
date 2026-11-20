@@ -1,6 +1,6 @@
 # Methods-to-code map
 
-Paths in the manuscript are relative to the GitHub analysis-folder root (the local release folder is `02_GitHub_analysis/`). The companion data folder is `01_Zenodo_data/`. Repository URLs and release identifiers are still unset in `metadata.json`.
+Paths below are relative to the repository root or to the extracted original data folder, `01_Zenodo_data/`. Current manuscript numbers and companion workflows are listed in the [manuscript panel guide](MANUSCRIPT_PANELS.md). The public code URL and reserved data DOI are recorded in `metadata.json`.
 
 The [panel input table](PANEL_INPUTS.csv) and [input catalog](../manifests/workflow_inputs.json) link the updated Zenodo assets to all 43 workflows. `python reproduce.py --list-panels` lists valid commands without requiring the data download.
 

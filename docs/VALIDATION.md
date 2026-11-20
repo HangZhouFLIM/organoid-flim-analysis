@@ -1,8 +1,10 @@
 # Release coverage and acceptance
 
-This is a figure-linked analysis release candidate. The code repository is private; the accompanying data package remains a local candidate pending its Zenodo deposit.
+This public repository accompanies the two manuscript data packages. On 20 November 2026 the Zenodo record was a draft with reserved DOI 10.5281/zenodo.23103396. The counts below describe the original `01_Zenodo_data.rar` validation. Coverage of the second archive is given in the [manuscript panel guide](MANUSCRIPT_PANELS.md).
 
 ## Verified contents
+
+The companion entry point was run on all five added panels. Recomputed S3, S7 and S14 descriptive tables matched their archived checkpoints, including the secondary S7 image and cell summaries. The three sets contained 1,715, 2,298 and 146 saved curves. Across 129 bins per curve, maximum absolute prediction differences were below 2.2 × 10⁻⁹ counts. Both S14 model orders used the same 73 ROIs. S9A rendered 18,806 stored coordinates, and S9C rendered all 84 gene–lineage entries. The following figures describe the earlier validation of the original archive.
 
 - 9,133 experimental files; 3,856,634,699 bytes (approximately 3.86 GB), plus administrative documentation.
 - 43 configured quantitative/descriptive workflows covering selected analyses in Results 1–6 and their supplementary panels.
@@ -29,7 +31,7 @@ Public names use figure and sample identifiers. Source acquisition metadata rema
 2. Final image-only panel identities, crops and display settings remain unresolved for the panels listed in `missing_inputs.csv`. Available quantitative acquisition channels are included, but exact representative assignments are not invented. In particular, full coverage is not claimed for Fig. 1i, Fig. 2 image-only panels, Fig. S4, Fig. S6 or the single-cell UMAP.
 3. Fig. S11b, rotenone sample 4: a newly reconstructed mitochondrial mask did not reproduce the archived means. Its regenerated mask is withheld; the archived compartment measurements reproduce the reported statistics. Recovering the original accepted mask/preprocessing record is still necessary for that one upstream measurement.
 4. Fig. 3b starts from the deposited pooled spatial-bin summary. The original coordinate-to-axis MATLAB processing is incomplete. Single-cell panels start from deposited sample-level scores; the complete expression-matrix-to-score/UMAP provenance is not yet reconstructed. Time courses start from the deposited time-resolved summaries.
-5. Authors/ORCIDs, Zenodo and archived-release identifiers, and licences remain unset in `metadata.json`. They must be supplied before public publication. The private GitHub repository URL is recorded; the Zenodo data have not been uploaded.
+5. The dataset DOI and public GitHub URL are recorded in `metadata.json`. The repository metadata currently leave the software and dataset licence fields open.
 
 The numerical workflows do not reconstruct manually assembled manuscript artwork. Reproduced plots retain their numerical data, pairings, statistical comparisons and explicit error-bar definitions; composite placement and representative-image assembly remain separate.
 
